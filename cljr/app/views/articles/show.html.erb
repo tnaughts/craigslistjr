@@ -1,0 +1,10 @@
+<%if flash[:link]%>
+ Edit link<%=link_to "/categories/#{@article.category.id}/articles/#{@article.id}/edit/#{flash[:link]}", "/categories/#{@article.category.id}/articles/#{@article.id}/edit/#{flash[:link]}"%>
+<%end%>
+
+<h2><%=link_to @article.category.title, "/categories/#{@article.category.id}"%></h2>
+<h4><%=@article.title_price%></h4>
+<ul><p>
+	<li><%=@article.description%></li>
+</p>
+</ul>
