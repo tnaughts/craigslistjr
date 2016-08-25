@@ -1,0 +1,13 @@
+<%if flash[:error]%>
+<%=flash[:error]%>
+<%end%>
+
+<%= form_tag("/categories/#{params[:category_id]}/articles/#{params[:article_id]}", method: "put") do %>
+<%= label_tag(:name, "Name:")%>
+<%= text_field_tag(:name, @article.name) %>
+<%= label_tag(:description, "Description:")%>
+<%= text_field_tag(:description, @article.description) %>
+<%= label_tag(:price, "Price:")%>
+<%= text_field_tag(:price, @article.price) %>
+<%=submit_tag("Post Article")%>
+<%end%>

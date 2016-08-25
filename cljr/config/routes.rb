@@ -9,6 +9,8 @@ Cljr::Application.routes.draw do
   get 'categories/:category_id/articles/new' => 'articles#new', as: :new_category_article
   get 'categories/:category_id/articles/:article_id' => 'articles#show', as: :category_article
   post '/categories/:category_id/articles' => 'articles#create'
+  get 'categories/:category_id/articles/:article_id/edit/:link' => 'articles#edit'
+  put '/categories/:category_id/articles/:article_id' => 'articles#update'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
