@@ -4,7 +4,11 @@ Cljr::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
+  root 'categories#index'
+  get '/categories/:category_id' => 'categories#show'
+  get 'categories/:category_id/articles/new' => 'articles#new', as: :new_category_article
+  get 'categories/:category_id/articles/:article_id' => 'articles#show', as: :category_article
+  post '/categories/:category_id/articles' => 'articles#create'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

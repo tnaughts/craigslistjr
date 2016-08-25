@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: cljr_development
   pool: 5
-  username: cljr
+  username: 
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,13 +48,13 @@ test:
   encoding: unicode
   database: cljr_test
   pool: 5
-  username: cljr
-  password:
+  username: 
+  password: 
 
 production:
   adapter: postgresql
   encoding: unicode
   database: cljr_production
   pool: 5
-  username: cljr
-  password:
+  username: 
+  password: 

@@ -1,0 +1,9 @@
+<h1><%=@category.title %></h1>
+<ul>
+	<%@category.articles.each do |article| %>
+		<li><%= link_to article.title_price, category_article_path(category_id: article.category_id, article_id: article.id)%>
+		</li>
+	<%end%>	
+</ul>
+
+<%= link_to "Create a new article", new_category_article_path(category_id: @category.id)%>
